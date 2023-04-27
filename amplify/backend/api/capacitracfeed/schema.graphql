@@ -1,0 +1,44 @@
+type Organization @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Owner: User @hasOne
+  Employee: User @hasOne
+}
+
+type Visualization @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  beginningWeight: Float
+  startTime: String
+  runTimeSec: Float
+  runTimeMin: Float
+  binID: ID! @index(name: "byBin")
+  rate: Float
+  feedMoved: Int
+}
+
+type Settings @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  diameter: Float
+  cylinderHeight: Float
+  conicalAngle: Float
+  binHeight: Float
+}
+
+type Bin @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  city: String
+  state: String
+  users: [User] @manyToMany(relationName: "UserBin")
+  BinToSetting: Settings @hasOne
+  BinToVis: [Visualization] @hasMany(indexName: "byBin", fields: ["id"])
+  fillPercentage: Float
+}
+
+type User @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  email: String
+  admin: Boolean
+  UsersToBins: [Bin] @manyToMany(relationName: "UserBin")
+}
+ 

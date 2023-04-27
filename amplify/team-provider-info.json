@@ -1,0 +1,31 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-capacitracfeed-dev-120036-authRole",
+      "UnauthRoleArn": "arn:aws:iam::309985666966:role/amplify-capacitracfeed-dev-120036-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::309985666966:role/amplify-capacitracfeed-dev-120036-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-capacitracfeed-dev-120036-deployment",
+      "UnauthRoleName": "amplify-capacitracfeed-dev-120036-unauthRole",
+      "StackName": "amplify-capacitracfeed-dev-120036",
+      "StackId": "arn:aws:cloudformation:us-east-1:309985666966:stack/amplify-capacitracfeed-dev-120036/0f86d490-bf65-11ed-88b0-0e12f6b6a4b3",
+      "AmplifyAppId": "d3i3l8qhgsyedh"
+    },
+    "categories": {
+      "api": {
+        "capacitracfeed": {},
+        "AdminQueries": {}
+      },
+      "auth": {
+        "capacitracfeed": {},
+        "userPoolGroups": {}
+      },
+      "function": {
+        "AdminQueries3d9a4364": {
+          "deploymentBucketName": "amplify-capacitracfeed-dev-120036-deployment",
+          "s3Key": "amplify-builds/AdminQueries3d9a4364-336a4b365a7537324343-build.zip"
+        }
+      }
+    }
+  }
+}
